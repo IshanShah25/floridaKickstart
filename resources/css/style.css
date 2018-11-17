@@ -1,3 +1,6 @@
+/*------------------------------------------------- */
+/* Basic Rig */
+/*------------------------------------------------- */
 *{
     margin: 0;
     padding: 0;
@@ -11,33 +14,72 @@ html {
     font-size: 20px;
     text-rendering: optimizeLegibility;
 }
+
+
+/*---------------------Reusable Code----------------------*/
+
+/*-----------------Blue Color #2980b9 --------------------------*/
+
+
+
 .row {
     max-width: 1140px;
     margin: 0 auto;
 }
-header{
-    background-image: linear-gradient(#000,rgba(33, 33, 33, 0)), url(img/e065f812-dfb6-4995-9541-1a5d3912f297.jpg),linear-gradient(#c40808,#000) ;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+
+section{
+    padding: 80px 0;
 }
-.slogan-text {
-    position: absolute;
-    width: 1250px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: white;
-        
-    }
+h1,
+h2,
+h3{
+    
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
 h1{
     margin: 0;
+    margin-bottom: 20px;
     color: #fff;
     font-size: 200%;
-    font-weight: 300;
     word-spacing: 3px;
-    margin-bottom: 20px;
 }
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #2980b9;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+/*----------Paragraphs-------------*/
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+.box p{
+    font-size: 90%;
+    line-height: 140%;
+    
+}
+/*----------Paragraphs-------------*/
 .butt:link,
 .butt:visited{
     display: inline-block;
@@ -46,9 +88,24 @@ h1{
     text-decoration: none;
     border-radius: 200px;
     color: #fff;
-    transition: background-color 0.2s;
+    transition: background-color 0.5s,border 0.2s, color 0.2s;
         
 }
+/*----------Icon-------------*/
+
+.icon-big{
+    font-size: 350%;
+    display: block;
+    color: #2980b9;
+    margin-bottom: 10px;
+    
+    
+        
+}
+
+
+
+/*----------Buttons-------------*/
 
 .butt-full:link,
 .butt-full:visited{
@@ -59,45 +116,102 @@ h1{
 .butt-ghost:link{
     background-color: #2980b9;
     border: 1px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 .butt:hover,
 .butt:active{
     background: #2955b9
+     
       
 }
-/* Style the navigation bar */
-.navbar {
-  width: 100%;
-  background-color: #555;
-  overflow: auto;
+/*------------------------Header------------------*/
+
+header{
+    background-image: linear-gradient(#000,rgba(0, 0, 0, 0)), url(img/e065f812-dfb6-4995-9541-1a5d3912f297.jpg),linear-gradient(#c40808,#000) ;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center;
+}
+.online-lessons{
+    background-image: linear-gradient(#000,#2980b9), url(img/e065f812-dfb6-4995-9541-1a5d3912f297.jpg),linear-gradient(#c40808,#000) ;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center;
+    
 }
 
-/* Navbar links */
-.navbar a {
-  float: left;
-  text-align: center;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
+.slogan-text {
+    position: absolute;
+    width: 1250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+        
+    }
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
 }
-
-/* Navbar links on mouse-over */
-.navbar a:hover {
-  background-color: #000;
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+    
 }
-
-/* Current/active navbar link */
-.active {
-  background-color: #2980b9;
+.main-nav li{
+    display: inline;
+    margin-left: 40px;
 }
-
-/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0;
+   color: #fff; 
+   text-decoration: none;
+   text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+   
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #2980b9;
+    
+/*--------------------Courses------------------*/
+}
+.course-showlist {
+    list-style: none;
+    width: 100%;
+    
+}
+.course-showlist li{
     display: block;
-  }
+    float: left;
+    width: 25%;
+    
 }
+.language-photo{
+    width: 100%;
+    margin: 30%;
+    overflow: hidden;
+}
+.language-photo img{
+    opacity: 0.7;
+    width: 100;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+.language-photo img:hover {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+
+
 
 
